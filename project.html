@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | Karakoram Technical Services Pvt Ltd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-banner {
+            padding: 50px 8% 20px;
+            text-align: center;
+        }
+        .page-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .page-banner p {
+            color: var(--text-dim);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 30px 8% 10px;
+        }
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--text-light);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent-orange);
+            border-color: var(--accent-orange);
+            color: #ffffff;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            padding: 30px 8% 80px;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-orange);
+        }
+        .project-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .project-info {
+            padding: 20px;
+        }
+        .project-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-orange);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .project-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--text-light);
+        }
+        .project-info p {
+            color: var(--text-dim);
+            font-size: 0.88rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .project-location {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern">
+        
+        <!-- Top Info Header Bar -->
+        <div style="background: rgba(0, 0, 0, 0.3); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 8px 8%; font-size: 0.8rem; color: var(--text-dim); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <div>
+                <span style="margin-right: 15px;"><i class="fa-solid fa-location-dot" style="color: var(--accent-orange);"></i> Serving Gilgit, Hunza & Skardu</span>
+                <span><i class="fa-solid fa-clock" style="color: var(--accent-orange);"></i> Mon - Sat: 8:00 AM - 8:00 PM</span>
+            </div>
+            <div>
+                <a href="mailto:info@ktsgilgit.pk" style="color: var(--text-dim); text-decoration: none; margin-right: 15px;"><i class="fa-solid fa-envelope"></i> info@ktsgilgit.pk</a>
+                <a href="tel:+971581382229" style="color: var(--text-light); text-decoration: none; font-weight: 600;"><i class="fa-solid fa-phone" style="color: var(--accent-orange);"></i> +971 58 138 2229</a>
+            </div>
+        </div>
+
+        <!-- Navigation Header -->
+        <header>
+            <div class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="#0b2545" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#ff6b00" stroke-width="2"/>
+                    <path d="M 20,45 L 50,15 L 80,45" fill="none" stroke="#ffffff" stroke-width="4"/>
+                    <path d="M 35,60 L 65,35" stroke="#ff6b00" stroke-width="6" stroke-linecap="round"/>
+                </svg>
+                <div class="brand-name">
+                    <h1>Karakoram Technical Services</h1>
+                    <p>PVT LTD • GILGIT, PAKISTAN</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="btn-orange" onclick="location.href='index.html#quote-form-section'">Request Quote</button>
+        </header>
+
+        <!-- Banner -->
+        <div class="page-banner">
+            <h1>Our Project <span style="color: var(--accent-orange);">Portfolio</span></h1>
+            <p>Explore our recent technical installations, facility maintenance assignments, and supply contracts across Gilgit-Baltistan.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterProjects('all')">All Projects</button>
+            <button class="filter-btn" onclick="filterProjects('solar')">Solar Systems</button>
+            <button class="filter-btn" onclick="filterProjects('electrical')">Electrical</button>
+            <button class="filter-btn" onclick="filterProjects('plumbing')">Plumbing</button>
+            <button class="filter-btn" onclick="filterProjects('carpentry')">Carpentry & Paint</button>
+            <button class="filter-btn" onclick="filterProjects('supply')">General Supply</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <section class="projects-grid" id="projectsGrid">
+            
+            <!-- Project 1: Solar -->
+            <div class="project-card" data-category="solar">
+                <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=600&q=80" alt="Solar Microgrid" class="project-img">
+                <div class="project-info">
+                    <div class="project-category">Solar Engineering</div>
+                    <h3>15kW Commercial Hybrid Solar Array</h3>
+                    <p>Full installation of hybrid solar panels, inverter station, and lithium battery back-up system for a mountain resort.</p>
+                    <div class="project-location"><i class="fa-solid fa-location-dot" style="color: var(--accent-orange);"></i> Hunza Valley</div>
+                </div>
+            </div>
+
+            <!-- Project 2: Electrical -->
+            <div class="project-card" data-category="electrical">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Commercial Electrical DB Box" class="project-img">
+                <div class="project-info">
+                    <div class="project-category">Electrical Services</div>
+                    <h3>Commercial Facility DB Box & Rewiring</h3>
+                    <p>Main distribution panel upgrade, load balancing, and short-circuit protection for a corporate office building.</p>
+                    <div class="project-location"><i class="fa-solid fa-location-dot" style="color: var(--accent-orange);"></i> Jutial, Gilgit</div>
+                </div>
+            </div>
+
+            <!-- Project 3: Carpentry & Paint -->
+            <div class="project-card" data-category="carpentry">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Interior Woodwork and Paint" class="project-img">
+                <div class="project-info">
+                    <div class="project-category">Carpentry & Paint</div>
+                    <h3>Hotel Suite Woodworking & Weather Proofing</h3>
+                    <p>Custom cedar wood wall paneling, ceiling fittings, and damp-resistant interior paint applications.</p>
+                    <div class="project-location"><i class="fa-solid fa-location-dot" style="color: var(--accent-orange);"></i> Skardu City</div>
+                </div>
+            </div>
+
+            <!-- Project 4: Plumbing -->
+            <div class="project-card" data-category="plumbing">
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Commercial Plumbing Installation" class="project-img">
+                <div class="project-info">
+                    <div class="project-category">Plumbing & Sanitary</div>
+                    <h3>Hotel Sanitary & Central Geyser Fitting</h3>
+                    <p>Installation of dual gas/electric commercial water heater loops, high-pressure pumps, and sanitary fixtures.</p>
+                    <div class="project-location"><i class="fa-solid fa-location-dot" style="color: var(--accent-orange);"></i> Central Gilgit</div>
+                </div>
+            </div>
+
+            <!-- Project 5: General Supply -->
+            <div class="project-card" data-category="supply">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Supply Material Logistics" class="project-img">
+                <div class="project-info">
+                    <div class="project-category">General Order Supply</div>
+                    <h3>Hardware & Electrical Supply Contract</h3>
+                    <p>Bulk procurement and logistics delivery of heavy-duty wiring, breakers, and piping hardware for an infrastructure project.</p>
+                    <div class="project-location"><i class="fa-solid fa-location-dot" style="color: var(--accent-orange);"></i> Danyore, Gilgit</div>
+                </div>
+            </div>
+
+            <!-- Project 6: Solar -->
+            <div class="project-card" data-category="solar">
+                <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=600&q=80" alt="Residential Solar Power" class="project-img">
+                <div class="project-info">
+                    <div class="project-category">Solar Engineering</div>
+                    <h3>8kW Off-Grid Residential System</h3>
+                    <p>Complete off-grid solar installation designed to withstand sub-zero winter conditions and ensure uninterrupted power.</p>
+                    <div class="project-location"><i class="fa-solid fa-location-dot" style="color: var(--accent-orange);"></i> Aliabad, Hunza</div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Est. 2018 • Serving all of Gilgit-Baltistan • info@ktsgilgit.pk</p>
+        </footer>
+    </div>
+
+    <!-- Floating Emergency WhatsApp Widget -->
+    <a href="javascript:void(0)" onclick="emergencyWhatsApp()" style="position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 1000; text-decoration: none;" title="Emergency Support">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Inline script for project gallery filtering
+        function filterProjects(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

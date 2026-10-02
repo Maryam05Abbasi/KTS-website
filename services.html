@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Karakoram Technical Services Pvt Ltd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-banner {
+            padding: 50px 8% 20px;
+            text-align: center;
+        }
+        .page-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .page-banner p {
+            color: var(--text-dim);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        .services-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            padding: 40px 8% 80px;
+        }
+        .service-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 30px;
+            transition: transform 0.3s, border-color 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-orange);
+        }
+        .service-card .icon-box {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--text-light);
+        }
+        .service-card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        .service-list li {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .service-list li i {
+            color: var(--accent-orange);
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern">
+        
+        <!-- Top Info Header Bar -->
+        <div style="background: rgba(0, 0, 0, 0.3); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 8px 8%; font-size: 0.8rem; color: var(--text-dim); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <div>
+                <span style="margin-right: 15px;"><i class="fa-solid fa-location-dot" style="color: var(--accent-orange);"></i> Serving Gilgit, Hunza & Skardu</span>
+                <span><i class="fa-solid fa-clock" style="color: var(--accent-orange);"></i> Mon - Sat: 8:00 AM - 8:00 PM</span>
+            </div>
+            <div>
+                <a href="mailto:info@ktsgilgit.pk" style="color: var(--text-dim); text-decoration: none; margin-right: 15px;"><i class="fa-solid fa-envelope"></i> info@ktsgilgit.pk</a>
+                <a href="tel:+971581382229" style="color: var(--text-light); text-decoration: none; font-weight: 600;"><i class="fa-solid fa-phone" style="color: var(--accent-orange);"></i> +971 58 138 2229</a>
+            </div>
+        </div>
+
+        <!-- Shared Navigation Header -->
+        <header>
+            <div class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="#0b2545" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#ff6b00" stroke-width="2"/>
+                    <path d="M 20,45 L 50,15 L 80,45" fill="none" stroke="#ffffff" stroke-width="4"/>
+                    <path d="M 35,60 L 65,35" stroke="#ff6b00" stroke-width="6" stroke-linecap="round"/>
+                </svg>
+                <div class="brand-name">
+                    <h1>Karakoram Technical Services</h1>
+                    <p>PVT LTD • GILGIT, PAKISTAN</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="btn-orange" onclick="location.href='index.html#quote-form-section'">Request Quote</button>
+        </header>
+
+        <!-- Banner -->
+        <div class="page-banner">
+            <h1>Our Technical & <span style="color: var(--accent-orange);">Supply Services</span></h1>
+            <p>Complete facility maintenance, engineering solutions, appliance repairs, and general order supplies across Gilgit, Hunza, and Skardu.</p>
+        </div>
+
+        <!-- Services Detailed Grid -->
+        <section class="services-detail-grid">
+            
+            <!-- Electrician -->
+            <div class="service-card">
+                <div>
+                    <div class="icon-box"><i class="fa-solid fa-bolt" style="color: #eab308;"></i></div>
+                    <h3>Electrical Services</h3>
+                    <p>Complete residential and commercial electrical wiring, circuit breaker troubleshooting, DB box installation, and power backup setups.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Complete House & Office Rewiring</li>
+                        <li><i class="fa-solid fa-check"></i> Short Circuit Detection & Repair</li>
+                        <li><i class="fa-solid fa-check"></i> Generator & Inverter Connections</li>
+                    </ul>
+                </div>
+                <button class="btn-orange" onclick="selectServiceForQuote('Electrician')">Request Quote</button>
+            </div>
+
+            <!-- Plumber -->
+            <div class="service-card">
+                <div>
+                    <div class="icon-box"><i class="fa-solid fa-wrench" style="color: #38bdf8;"></i></div>
+                    <h3>Plumbing & Sanitary</h3>
+                    <p>Professional plumbing repairs, pipeline fitting, sanitary installation, water pump maintenance, and leak solutions.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Geyser Installation (Gas & Electric)</li>
+                        <li><i class="fa-solid fa-check"></i> Water Tank & Pump Fitting</li>
+                        <li><i class="fa-solid fa-check"></i> Bathroom & Kitchen Sanitary Piping</li>
+                    </ul>
+                </div>
+                <button class="btn-orange" onclick="selectServiceForQuote('Plumber')">Request Quote</button>
+            </div>
+
+            <!-- Carpenter -->
+            <div class="service-card">
+                <div>
+                    <div class="icon-box"><i class="fa-solid fa-hammer" style="color: #a855f7;"></i></div>
+                    <h3>Carpentry & Woodwork</h3>
+                    <p>Custom wooden furniture, kitchen cabinets, door and window installation, structural timber fitting, and repair work.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Custom Kitchen & Closet Cabinetry</li>
+                        <li><i class="fa-solid fa-check"></i> Door Lock & Frame Fitting</li>
+                        <li><i class="fa-solid fa-check"></i> Wooden Flooring & Trim Repairs</li>
+                    </ul>
+                </div>
+                <button class="btn-orange" onclick="selectServiceForQuote('Carpenter')">Request Quote</button>
+            </div>
+
+            <!-- Painter -->
+            <div class="service-card">
+                <div>
+                    <div class="icon-box"><i class="fa-solid fa-paint-roller" style="color: #f97316;"></i></div>
+                    <h3>Painting & Weather Proofing</h3>
+                    <p>Interior and exterior painting, weather-shield application, dampness treatment, and decorative wall finishes.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Interior Decor & Texture Paint</li>
+                        <li><i class="fa-solid fa-check"></i> Weather-Resistant Exterior Coating</li>
+                        <li><i class="fa-solid fa-check"></i> Moisture & Wall Seepage Repair</li>
+                    </ul>
+                </div>
+                <button class="btn-orange" onclick="selectServiceForQuote('Painter')">Request Quote</button>
+            </div>
+
+            <!-- Home Appliances -->
+            <div class="service-card">
+                <div>
+                    <div class="icon-box"><i class="fa-solid fa-tv" style="color: #ec4899;"></i></div>
+                    <h3>Home Appliances Maintenance</h3>
+                    <p>Certified repair and maintenance services for home and commercial electrical and gas appliances.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Washing Machines & Dryers Repair</li>
+                        <li><i class="fa-solid fa-check"></i> Refrigerator & Deep Freezer Service</li>
+                        <li><i class="fa-solid fa-check"></i> Microwave, Oven & Room Heater Service</li>
+                    </ul>
+                </div>
+                <button class="btn-orange" onclick="selectServiceForQuote('Home Appliances')">Request Quote</button>
+            </div>
+
+            <!-- General Order Supplier -->
+            <div class="service-card">
+                <div>
+                    <div class="icon-box"><i class="fa-solid fa-truck-ramp-box" style="color: #22c55e;"></i></div>
+                    <h3>General Order Supplier</h3>
+                    <p>Bulk procurement and delivery of hardware, electrical fixtures, construction raw materials, and technical equipment for government and private projects.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Hardware & Electrical Material Procurement</li>
+                        <li><i class="fa-solid fa-check"></i> Corporate & Hotel Supply Solutions</li>
+                        <li><i class="fa-solid fa-check"></i> Timely On-Site Logistics across GB</li>
+                    </ul>
+                </div>
+                <button class="btn-orange" onclick="selectServiceForQuote('General Order Supplier')">Request Quote</button>
+            </div>
+
+            <!-- Solar Installation -->
+            <div class="service-card">
+                <div>
+                    <div class="icon-box"><i class="fa-solid fa-solar-panel" style="color: #ff6b00;"></i></div>
+                    <h3>Solar Systems & Net Metering</h3>
+                    <p>On-grid, off-grid, and hybrid solar installations tailored for extreme climate conditions in northern Pakistan.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Solar Panel & Inverter Setup</li>
+                        <li><i class="fa-solid fa-check"></i> Lithium & Tubular Battery Banks</li>
+                        <li><i class="fa-solid fa-check"></i> Periodic Solar Maintenance & Cleaning</li>
+                    </ul>
+                </div>
+                <button class="btn-orange" onclick="selectServiceForQuote('Solar Installation')">Request Quote</button>
+            </div>
+
+            <!-- Building Maintenance -->
+            <div class="service-card">
+                <div>
+                    <div class="icon-box"><i class="fa-solid fa-city" style="color: #6366f1;"></i></div>
+                    <h3>Facility & Building Maintenance</h3>
+                    <p>Annual maintenance contracts (AMC) for commercial hotels, guest houses, offices, and residential compounds.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Scheduled Facility Inspections</li>
+                        <li><i class="fa-solid fa-check"></i> On-Demand On-Site Emergency Repair</li>
+                        <li><i class="fa-solid fa-check"></i> Dedicated Maintenance Engineers</li>
+                    </ul>
+                </div>
+                <button class="btn-orange" onclick="selectServiceForQuote('Building Maintenance')">Request Quote</button>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Est. 2018 • Serving all of Gilgit-Baltistan • info@ktsgilgit.pk</p>
+        </footer>
+    </div>
+
+    <!-- Floating Emergency WhatsApp Widget -->
+    <a href="javascript:void(0)" onclick="emergencyWhatsApp()" style="position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 1000; text-decoration: none;" title="Emergency Support">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

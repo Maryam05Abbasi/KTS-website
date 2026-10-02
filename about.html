@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Karakoram Technical Services Pvt Ltd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .about-hero {
+            padding: 60px 8% 40px;
+            text-align: center;
+        }
+        .about-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .about-hero p {
+            color: var(--text-dim);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px 8% 50px;
+        }
+        .stat-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+        }
+        .stat-card h3 {
+            font-size: 2.2rem;
+            color: var(--accent-orange);
+            margin-bottom: 5px;
+        }
+        .stat-card p {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 40px 8% 80px;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .about-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .about-text p {
+            color: var(--text-dim);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 8% 80px;
+        }
+        .value-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--accent-orange);
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .value-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-light);
+        }
+        .value-card p {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern">
+        
+        <!-- Top Info Header Bar -->
+        <div style="background: rgba(0, 0, 0, 0.3); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 8px 8%; font-size: 0.8rem; color: var(--text-dim); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <div>
+                <span style="margin-right: 15px;"><i class="fa-solid fa-location-dot" style="color: var(--accent-orange);"></i> Serving Gilgit, Hunza & Skardu</span>
+                <span><i class="fa-solid fa-clock" style="color: var(--accent-orange);"></i> Mon - Sat: 8:00 AM - 8:00 PM</span>
+            </div>
+            <div>
+                <a href="mailto:info@ktsgilgit.pk" style="color: var(--text-dim); text-decoration: none; margin-right: 15px;"><i class="fa-solid fa-envelope"></i> info@ktsgilgit.pk</a>
+                <a href="tel:+971581382229" style="color: var(--text-light); text-decoration: none; font-weight: 600;"><i class="fa-solid fa-phone" style="color: var(--accent-orange);"></i> +971 58 138 2229</a>
+            </div>
+        </div>
+
+        <!-- Shared Header -->
+        <header>
+            <div class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="#0b2545" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#ff6b00" stroke-width="2"/>
+                    <path d="M 20,45 L 50,15 L 80,45" fill="none" stroke="#ffffff" stroke-width="4"/>
+                    <path d="M 35,60 L 65,35" stroke="#ff6b00" stroke-width="6" stroke-linecap="round"/>
+                </svg>
+                <div class="brand-name">
+                    <h1>Karakoram Technical Services</h1>
+                    <p>PVT LTD • GILGIT, PAKISTAN</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="btn-orange" onclick="location.href='index.html#quote-form-section'">Request Quote</button>
+        </header>
+
+        <!-- Hero -->
+        <div class="about-hero">
+            <h1>Building & Sustaining Technical Excellence in <span style="color: var(--accent-orange);">Gilgit-Baltistan</span></h1>
+            <p>Established in 2018, Karakoram Technical Services Pvt Ltd is a premier multi-disciplinary technical solutions provider delivering engineering, maintenance, and supply services designed for northern Pakistan’s climate and terrain.</p>
+        </div>
+
+        <!-- Stats Grid -->
+        <section class="stats-container">
+            <div class="stat-card">
+                <h3>2018</h3>
+                <p>Year Established</p>
+            </div>
+            <div class="stat-card">
+                <h3>150+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-card">
+                <h3>25+</h3>
+                <p>Certified Technicians</p>
+            </div>
+            <div class="stat-card">
+                <h3>100%</h3>
+                <p>Safety & Compliance</p>
+            </div>
+        </section>
+
+        <!-- About Narrative -->
+        <section class="about-grid">
+            <div class="about-text">
+                <h2>Reliable Technical Infrastructure for Residential & Commercial Needs</h2>
+                <p>Karakoram Technical Services was established to address the growing demand for structured, professional, and reliable technical operations in the region. We specialize in electrical, plumbing, woodwork, climate-tailored painting, home appliance maintenance, renewable solar power engineering, and general order supplies.</p>
+                <p>Whether servicing hospitality facilities, commercial offices, government infrastructure, or private residences, our teams operate with strict quality guidelines and safety compliance.</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 30px;">
+                <h3 style="margin-bottom: 20px; color: var(--accent-orange);"><i class="fa-solid fa-map-location-dot"></i> Service Regions</h3>
+                <ul style="list-style: none; padding: 0; line-height: 2.2; color: var(--text-light);">
+                    <li><i class="fa-solid fa-check" style="color: var(--accent-orange); margin-right: 10px;"></i> <strong>Gilgit District:</strong> Central City, Jutial, Danyore, Nomal</li>
+                    <li><i class="fa-solid fa-check" style="color: var(--accent-orange); margin-right: 10px;"></i> <strong>Hunza District:</strong> Aliabad, Karimabad, Gulmit</li>
+                    <li><i class="fa-solid fa-check" style="color: var(--accent-orange); margin-right: 10px;"></i> <strong>Skardu Region:</strong> Commercial & Resort Facilities</li>
+                    <li><i class="fa-solid fa-check" style="color: var(--accent-orange); margin-right: 10px;"></i> <strong>General Procurement:</strong> Regional Supply Delivery across GB</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <div style="text-align: center; margin-bottom: 20px;">
+            <h2>Core Operating <span style="color: var(--accent-orange);">Principles</span></h2>
+        </div>
+        <section class="values-grid">
+            <div class="value-card">
+                <h4><i class="fa-solid fa-shield-halved"></i> Safety & Standards</h4>
+                <p>Every technician follows regulated procedures to protect client property and ensure long-term operational integrity.</p>
+            </div>
+            <div class="value-card">
+                <h4><i class="fa-solid fa-user-check"></i> Certified Expertise</h4>
+                <p>Our workforce comprises trained electricians, plumbers, HVAC technicians, and project managers equipped with modern tooling.</p>
+            </div>
+            <div class="value-card">
+                <h4><i class="fa-solid fa-handshake"></i> Transparency & SLAs</h4>
+                <p>Clear pricing structures, formal quotation tickets, and defined project completion timelines on every assignment.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Est. 2018 • Serving all of Gilgit-Baltistan • info@ktsgilgit.pk</p>
+        </footer>
+    </div>
+
+    <!-- Floating Emergency WhatsApp Widget -->
+    <a href="javascript:void(0)" onclick="emergencyWhatsApp()" style="position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 1000; text-decoration: none;" title="Emergency Support">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

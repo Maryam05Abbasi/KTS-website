@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Karakoram Technical Services Pvt Ltd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-banner {
+            padding: 50px 8% 20px;
+            text-align: center;
+        }
+        .page-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .page-banner p {
+            color: var(--text-dim);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            padding: 40px 8% 80px;
+        }
+        @media (max-width: 850px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .contact-info-panel {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--accent-orange);
+            margin-top: 4px;
+        }
+        .info-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+            color: var(--text-light);
+        }
+        .info-item p, .info-item a {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+        .info-item a:hover {
+            color: var(--accent-orange);
+        }
+        .contact-form-panel {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 35px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--accent-orange);
+        }
+        .form-group select option {
+            background: #0b2545;
+            color: #ffffff;
+        }
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+        .modal-box {
+            background: #0b2545;
+            border: 1px solid var(--accent-orange);
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern">
+        
+        <!-- Top Info Header Bar -->
+        <div style="background: rgba(0, 0, 0, 0.3); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 8px 8%; font-size: 0.8rem; color: var(--text-dim); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <div>
+                <span style="margin-right: 15px;"><i class="fa-solid fa-location-dot" style="color: var(--accent-orange);"></i> Serving Gilgit, Hunza & Skardu</span>
+                <span><i class="fa-solid fa-clock" style="color: var(--accent-orange);"></i> Mon - Sat: 8:00 AM - 8:00 PM</span>
+            </div>
+            <div>
+                <a href="mailto:info@ktsgilgit.pk" style="color: var(--text-dim); text-decoration: none; margin-right: 15px;"><i class="fa-solid fa-envelope"></i> info@ktsgilgit.pk</a>
+                <a href="tel:+971581382229" style="color: var(--text-light); text-decoration: none; font-weight: 600;"><i class="fa-solid fa-phone" style="color: var(--accent-orange);"></i> +971 58 138 2229</a>
+            </div>
+        </div>
+
+        <!-- Shared Navigation Header -->
+        <header>
+            <div class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="#0b2545" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#ff6b00" stroke-width="2"/>
+                    <path d="M 20,45 L 50,15 L 80,45" fill="none" stroke="#ffffff" stroke-width="4"/>
+                    <path d="M 35,60 L 65,35" stroke="#ff6b00" stroke-width="6" stroke-linecap="round"/>
+                </svg>
+                <div class="brand-name">
+                    <h1>Karakoram Technical Services</h1>
+                    <p>PVT LTD • GILGIT, PAKISTAN</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="btn-orange" onclick="document.getElementById('contactForm').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
+        </header>
+
+        <!-- Banner -->
+        <div class="page-banner">
+            <h1>Contact <span style="color: var(--accent-orange);">Karakoram Technical</span></h1>
+            <p>Have an urgent repair, procurement order, or service inquiry? Reach out to our technical dispatch team today.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <section class="contact-container">
+            
+            <!-- Contact Details Panel -->
+            <div class="contact-info-panel">
+                <div>
+                    <h2 style="font-size: 1.8rem; margin-bottom: 25px;">Get In Touch</h2>
+                    
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Regional Head Office</h4>
+                            <p>Karakoram Highway Road, Main Market,<br>Gilgit, Gilgit-Baltistan, Pakistan</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Direct Phone & Helpline</h4>
+                            <a href="tel:+971581382229">+971 58 138 2229</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email Communications</h4>
+                            <a href="mailto:info@ktsgilgit.pk">info@ktsgilgit.pk</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h4>Operating Hours</h4>
+                            <p>Monday - Saturday: 8:00 AM - 8:00 PM<br>Sunday: Closed (Emergency Dispatch Only)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: rgba(255, 107, 0, 0.1); border: 1px solid var(--accent-orange); border-radius: 12px; padding: 20px; text-align: center; margin-top: 20px;">
+                    <h4 style="color: var(--accent-orange); margin-bottom: 8px;"><i class="fa-brands fa-whatsapp"></i> Instant Emergency Support</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 12px;">Need an immediate technician for electrical or plumbing emergencies?</p>
+                    <button class="btn-orange" style="width: 100%;" onclick="emergencyWhatsApp('Emergency Inquiry')">Chat on WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- Form Panel -->
+            <div class="contact-form-panel">
+                <h2 style="font-size: 1.8rem; margin-bottom: 20px;">Send a Message / Request Quote</h2>
+                
+                <form id="contactForm" onsubmit="handleQuoteSubmit(event)">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="name" required placeholder="e.g. Ali Khan">
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+92 300 0000000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="serviceType">Service Required *</label>
+                        <select id="serviceType" name="service" required>
+                            <option value="">Select a service category</option>
+                            <option value="Electrician">Electrician & Rewiring</option>
+                            <option value="Plumber">Plumber & Sanitary</option>
+                            <option value="Carpenter">Carpenter & Woodwork</option>
+                            <option value="Painter">Painter & Weather Proofing</option>
+                            <option value="Home Appliances">Home Appliances Maintenance</option>
+                            <option value="General Order Supplier">General Order Supplier</option>
+                            <option value="Solar Installation">Solar Systems & Net Metering</option>
+                            <option value="Building Maintenance">Facility & Building Maintenance</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location / District *</label>
+                        <input type="text" id="location" name="location" required placeholder="e.g. Jutial Gilgit, Hunza, Skardu">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Project Details or Requirements</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Describe the service needed or products to procure..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-orange" style="width: 100%; padding: 14px; font-size: 1rem;">Submit Request</button>
+                </form>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Est. 2018 • Serving all of Gilgit-Baltistan • info@ktsgilgit.pk</p>
+        </footer>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal-overlay">
+        <div class="modal-box">
+            <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #22c55e; margin-bottom: 15px;"></i>
+            <h3>Request Submitted Successfully!</h3>
+            <p style="color: var(--text-dim); margin: 15px 0; font-size: 0.95rem;">
+                Thank you for contacting Karakoram Technical Services. Your reference ticket number is:
+            </p>
+            <div id="refTicketNumber" style="font-size: 1.3rem; font-weight: 700; color: var(--accent-orange); background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px; margin-bottom: 20px;"></div>
+            <p style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 20px;">
+                Our dispatch team will review your inquiry and get back to you shortly.
+            </p>
+            <button class="btn-orange" onclick="closeConfirmationModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Floating Emergency WhatsApp Widget -->
+    <a href="javascript:void(0)" onclick="emergencyWhatsApp()" style="position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 1000; text-decoration: none;" title="Emergency Support">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
