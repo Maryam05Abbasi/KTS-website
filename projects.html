@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Portfolio | Karakoram Technical Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-banner {
+            padding: 50px 8% 20px;
+            text-align: center;
+        }
+        .page-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .page-banner p {
+            color: var(--text-dim);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            padding: 40px 8% 80px;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-orange);
+        }
+        .project-body {
+            padding: 25px;
+        }
+        .project-badge {
+            display: inline-block;
+            background: rgba(255, 107, 0, 0.15);
+            color: var(--accent-orange);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+        .project-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+        .project-desc {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 15px;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+        .project-meta i {
+            color: var(--accent-orange);
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern">
+        
+        <!-- Header -->
+        <header>
+            <div class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="#0b2545" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#ff6b00" stroke-width="2"/>
+                    <path d="M 20,45 L 50,15 L 80,45" fill="none" stroke="#ffffff" stroke-width="4"/>
+                    <path d="M 35,60 L 65,35" stroke="#ff6b00" stroke-width="6" stroke-linecap="round"/>
+                </svg>
+                <div class="brand-name">
+                    <h1>Karakoram Technical Services</h1>
+                    <p>PVT LTD • GILGIT, PAKISTAN</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="btn-orange" onclick="window.location.href='contact.html'">Get In Touch</button>
+        </header>
+
+        <!-- Page Banner -->
+        <div class="page-banner">
+            <h1>Completed <span style="color: var(--accent-orange);">Projects</span></h1>
+            <p>Take a look at some of our major technical, electrification, and supply contracts delivered across Gilgit-Baltistan.</p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="project-body">
+                    <span class="project-badge">Solar Energy</span>
+                    <h3 class="project-title">Commercial Off-Grid Solar Installation</h3>
+                    <p class="project-desc">Designed and installed a complete 15kW off-grid solar power system with lithium battery storage for a hotel facility in Hunza Valley.</p>
+                    <div class="project-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> Hunza</span>
+                        <span><i class="fa-solid fa-check"></i> Completed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-body">
+                    <span class="project-badge">Electrification</span>
+                    <h3 class="project-title">Commercial Building Rewiring</h3>
+                    <p class="project-desc">Full electrical wiring, distribution board setup, and safety breaker installation for a multi-story commercial complex in Gilgit.</p>
+                    <div class="project-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> Gilgit</span>
+                        <span><i class="fa-solid fa-check"></i> Completed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-body">
+                    <span class="project-badge">General Supplies</span>
+                    <h3 class="project-title">Institutional Equipment Procurement</h3>
+                    <p class="project-desc">Sourced, delivered, and deployed hardware, stationery, and technical tools for government offices under an official supply contract.</p>
+                    <div class="project-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> Skardu</span>
+                        <span><i class="fa-solid fa-check"></i> Completed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-body">
+                    <span class="project-badge">Plumbing & HVAC</span>
+                    <h3 class="project-title">High-Altitude Water Line Insulation</h3>
+                    <p class="project-desc">Implemented specialized weather-proof sanitary piping and freeze-resistant thermal insulation for a residential estate.</p>
+                    <div class="project-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> Gilgit</span>
+                        <span><i class="fa-solid fa-check"></i> Completed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-body">
+                    <span class="project-badge">Woodwork</span>
+                    <h3 class="project-title">Custom Office Fitting & Renovation</h3>
+                    <p class="project-desc">Designed and built custom wooden workstations, wall paneling, and interior fixtures for a regional corporate office.</p>
+                    <div class="project-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> Gilgit</span>
+                        <span><i class="fa-solid fa-check"></i> Completed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-body">
+                    <span class="project-badge">Facility Maintenance</span>
+                    <h3 class="project-title">Annual Facility Maintenance Contract</h3>
+                    <p class="project-desc">Comprehensive maintenance package covering on-demand electrical, plumbing, painting, and appliance repairs for a hospitality group.</p>
+                    <div class="project-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> Hunza & Gilgit</span>
+                        <span><i class="fa-solid fa-check"></i> Active Contract</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>Est. 2018 • Serving all of Gilgit-Baltistan • info@ktsgilgit.pk</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
