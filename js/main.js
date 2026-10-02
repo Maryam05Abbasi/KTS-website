@@ -1,5 +1,50 @@
 console.log("KTS Website setup connected successfully!");
 
+// Initialize Supabase Client
+const SUPABASE_URL = 'https://ydcextmkyqjuzqjpeyql.supabase.co/rest/v1/'; 
+const SUPABASE_ANON_KEY = 'sb_publishable_ZnA6ew1uZNY3RuIRCnpAag_i2SW1...'; // Paste your full key from the screenshot
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+// Handle Quote Form Submission
+async function handleQuoteSubmit(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = new FormData(form);
+    const ticketId = 'KTS-' + Math.floor(100000 + Math.random() * 900000);
+
+    const leadData = {
+        full_name: formData.get('fullName'),
+        phone: formData.get('phone'),
+        email: formData.get('email') || '',
+        service: formData.get('service'),
+        location: formData.get('location'),
+        schedule: formData.get('schedule') || '',
+        message: formData.get('message') || '',
+        ticket_id: ticketId,
+        status: 'Pending'
+    };
+
+    try {
+        const { error } = await supabaseClient
+            .from('leads')
+            .insert([leadData]);
+
+        if (error) throw error;
+
+        document.getElementById('refTicketNumber').innerText = ticketId;
+        document.getElementById('confirmationModal').style.display = 'flex';
+        form.reset();
+    } catch (err) {
+        console.error('Error submitting quote:', err);
+        alert('There was an issue saving your request. Please contact us directly on WhatsApp.');
+    }
+}
+
+function closeConfirmationModal() {
+    document.getElementById('confirmationModal').style.display = 'none';
+}
 // Smooth scroll to quote section and pre-select service
 function selectServiceForQuote(serviceName) {
     const formSection = document.getElementById('quote-form-section');

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTS Admin Panel | Lead Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .admin-section { padding: 40px 8%; }
+        .leads-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: rgba(255,255,255,0.03); border-radius: 10px; overflow: hidden; }
+        .leads-table th, .leads-table td { padding: 14px 18px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 0.9rem; }
+        .leads-table th { background: rgba(255,107,0,0.15); color: var(--accent-orange, #ff6b00); }
+        .badge { padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; }
+        .badge-Pending { background: #eab308; color: #000; }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern">
+        <header>
+            <div class="brand-name">
+                <h1>Karakoram Technical Services</h1>
+                <p>ADMIN LEAD MANAGEMENT PANEL</p>
+            </div>
+            <button class="btn-orange" onclick="fetchLeads()"><i class="fa-solid fa-rotate"></i> Refresh</button>
+        </header>
+
+        <section class="admin-section">
+            <h2>Quote Inquiries</h2>
+            <div style="overflow-x: auto;">
+                <table class="leads-table">
+                    <thead>
+                        <tr>
+                            <th>Ticket ID</th>
+                            <th>Date</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Service</th>
+                            <th>Location</th>
+                            <th>Schedule</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr><td colspan="8" style="text-align: center;">Loading leads...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const SUPABASE_URL = 'YOUR_PROJECT_URL_HERE';
+        const SUPABASE_ANON_KEY = 'sb_publishable_ZnA6ew1uZNY3RuIRCnpAag_i2SW1...'; 
+        const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        async function fetchLeads() {
+            const tbody = document.getElementById('tableBody');
+            const { data: leads, error } = await supabaseClient
+                .from('leads')
+                .select('*')
+                .order('created_at', { ascending: false });
+
+            if (error || !leads || leads.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center;">No inquiries found yet.</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = leads.map(item => `
+                <tr>
+                    <td style="font-weight: 700; color: var(--accent-orange, #ff6b00);">${item.ticket_id}</td>
+                    <td>${new Date(item.created_at).toLocaleDateString()}</td>
+                    <td>${item.full_name}</td>
+                    <td><a href="https://wa.me/${item.phone.replace(/[^0-9]/g, '')}" target="_blank" style="color: #25d366;"><i class="fa-brands fa-whatsapp"></i> ${item.phone}</a></td>
+                    <td>${item.service}</td>
+                    <td>${item.location}</td>
+                    <td>${item.schedule || '-'}</td>
+                    <td><span class="badge badge-${item.status}">${item.status}</span></td>
+                </tr>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchLeads);
+    </script>
+</body>
+</html>
